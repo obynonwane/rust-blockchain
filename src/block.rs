@@ -88,8 +88,10 @@ impl Block {
     }
 }
 
-// Implementing the From trait for IVec: converts a block into an IVec
-//
+// Implementing the From trait for Block & IVec struct: converts a block into an IVec
+// Trait defines shared behaviours among types
+// Allows us to create an instance of one type from another type
+// Block instance is converted into an IVec instance
 impl From<Block> for IVec {
     // from fn accepts a block
     fn from(b: Block) -> Self {
